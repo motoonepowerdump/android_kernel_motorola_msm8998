@@ -2,7 +2,7 @@ name: Build KernelSU
 on:
   push:
     branches:
-          - ksu
+          - ksu-back
   workflow_dispatch:
 
 jobs:
