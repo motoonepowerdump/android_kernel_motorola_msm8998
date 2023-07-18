@@ -67,7 +67,7 @@ jobs:
            defconfig="arch/arm64/configs/${{ matrix.device }}_defconfig"
            echo "CONFIG_KPROBES=y" >> $defconfig
            echo "CONFIG_HAVE_KPROBES=y" >> $defconfig
-           echo "CONFIG_KPROBE_EVENTS=y" >> $defconfig
+           echo "CONFIG_KPROBE_EVENT=y" >> $defconfig
 
       - name: Setup Ccache
         uses: hendrikmuhs/ccache-action@v1.2
