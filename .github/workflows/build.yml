@@ -65,9 +65,9 @@ jobs:
            git config --global user.name "Rushi Ranpise"
            curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
            defconfig="arch/arm64/configs/${{ matrix.device }}_defconfig"
-           echo "# CONFIG_KPROBES is not set" >> $defconfig
-           echo "# CONFIG_HAVE_KPROBES is not set" >> $defconfig
-           echo "# CONFIG_KPROBE_EVENTS is not set" >> $defconfig
+           echo "CONFIG_KPROBES=y" >> $defconfig
+           echo "CONFIG_HAVE_KPROBES=y" >> $defconfig
+           echo "CONFIG_KPROBE_EVENTS=y" >> $defconfig
 
       - name: Setup Ccache
         uses: hendrikmuhs/ccache-action@v1.2
